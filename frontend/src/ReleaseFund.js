@@ -23,7 +23,7 @@ function ReleaseFund(props) {
             setLoading(true);
             console.log(parseInt(id));
 
-            const response_accept = await axios.get('https://172-104-140-210.ip.linodeusercontent.com/get_accept_status_kaia/' + id);
+            const response_accept = await axios.get('https://backend-url/get_accept_status_kaia/' + id);
 
             if (response_accept.status === 200) {
                 setLoading(false);
@@ -61,7 +61,7 @@ function ReleaseFund(props) {
         try {
             setLoading(true);
             // console.log("id>>>>>>>", id);
-            // const response = await axios.get('https://172-104-140-210.ip.linodeusercontent.com/finish_kaia/' + id);
+            // const response = await axios.get('https://backend-url/finish_kaia/' + id);
             // console.log("response:", response)
             // if (response.status === 200 && response.data["success"]) {
                 const contract = new ethers.Contract(contract_address, ContractAbi, signer);
@@ -72,7 +72,7 @@ function ReleaseFund(props) {
                 await tx.wait();
 
                 console.log('Release Fund requested successfully');
-                const response_accept = await axios.get('https://172-104-140-210.ip.linodeusercontent.com/get_accept_status_kaia/' + id);
+                const response_accept = await axios.get('https://backend-url/get_accept_status_kaia/' + id);
 
                 if (response_accept.status === 200) {
                     setLoading(false);

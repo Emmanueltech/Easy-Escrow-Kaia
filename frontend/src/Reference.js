@@ -40,7 +40,7 @@ function Reference(props) {
             setLoading(true);
             console.log("id>>>>>>>", id);
 
-            const response = await axios.get('https://172-104-140-210.ip.linodeusercontent.com/get_escrow_kaia/' + id);
+            const response = await axios.get('https://backend-url/get_escrow_kaia/' + id);
 
             if (response.status === 200) {
                 setData(response.data["reference"]);
@@ -48,7 +48,7 @@ function Reference(props) {
                 setLoading(false);
                 console.log(response.data);
 
-                const response_accept = await axios.get('https://172-104-140-210.ip.linodeusercontent.com/get_accept_status_kaia/' + id);
+                const response_accept = await axios.get('https://backend-url/get_accept_status_kaia/' + id);
 
                 if (response_accept.status === 200) {
                     setLoading(false);

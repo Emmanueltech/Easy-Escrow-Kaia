@@ -14,7 +14,7 @@ function Validate(props) {
     const getData = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('https://172-104-140-210.ip.linodeusercontent.com/reference/' + id);
+            const response = await axios.get('https://backend-url/reference/' + id);
 
             if (response.status === 200) {
 
@@ -37,7 +37,7 @@ function Validate(props) {
     const validate = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('https://172-104-140-210.ip.linodeusercontent.com/validate/' + id);
+            const response = await axios.get('https://backend-url/validate/' + id);
 
             if (response.status === 200 && response.data["success"]) {
                 setValidated(true);

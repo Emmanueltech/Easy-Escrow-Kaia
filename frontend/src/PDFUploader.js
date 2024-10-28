@@ -21,7 +21,7 @@ function PDFUploader(props) {
 
     try {
       setLoading(true);
-      const response = await axios.post('https://172-104-140-210.ip.linodeusercontent.com/derive', formData, {
+      const response = await axios.post('https://backend-url/derive', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

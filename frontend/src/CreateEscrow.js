@@ -53,7 +53,7 @@ function CreateEscrow(props) {
 
             try {
                 setLoading(true); // Set loading state before making the request
-                const response = await axios.post('https://172-104-140-210.ip.linodeusercontent.com/escrow_kaia', body, {
+                const response = await axios.post('https://backend-url/escrow_kaia', body, {
                     headers: {
                         'Content-Type': 'application/json',
                     },
