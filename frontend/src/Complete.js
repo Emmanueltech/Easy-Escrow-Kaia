@@ -20,7 +20,7 @@ function Complete(props) {
         try {
             setLoading(true);
             console.log("ID Type", typeof Number(id));
-            const response = await axios.get('https://backend-url/get_escrow_kaia/' + id);
+            const response = await axios.get('https://172-104-140-210.ip.linodeusercontent.com/get_escrow_kaia/' + id);
 
             if (response.status === 200) {
                 // setCompleted(response.data["reference"]["finished"]);
@@ -61,7 +61,7 @@ function Complete(props) {
         try {
             setLoading(true);
             console.log("id>>>>>>>", id);
-            const response = await axios.get('https://backend-url/finish_kaia/' + id);
+            const response = await axios.get('https://172-104-140-210.ip.linodeusercontent.com/finish_kaia/' + id);
             console.log("response:", response)
             if (response.status === 200 && response.data["success"]) {
                 console.log("Here is it")

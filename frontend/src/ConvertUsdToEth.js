@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const convertUsdToEth = async (amount) => {
     try {
-        const response = await axios.get('https://backend-url/fetch_kaia_price');
+        const response = await axios.get('https://172-104-140-210.ip.linodeusercontent.com/fetch_kaia_price');
         if(response.status === 200) {
             console.log("response:", response)
             const kaia_price = await response.data["price"];

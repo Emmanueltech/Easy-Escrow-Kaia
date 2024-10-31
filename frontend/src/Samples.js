@@ -1,5 +1,5 @@
 import React from 'react';
-import pdf from './FakeEscrow.pdf';
+import pdf from './Escrow.pdf';
 import thumbnail from './Thumbnail.png';
 
 function Samples() {
